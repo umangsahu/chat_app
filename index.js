@@ -2,10 +2,10 @@
 const express=require('express');
 const app=express();
 const http=require('http').createServer(app);
-const PORT=process.env.PORT||3000;
+const port=process.env.PORT||3000;
 
-http.listen(PORT,()=>{
-    console.log(`listening on port ${PORT}`)
+http.listen(port,()=>{
+    console.log(`listening on port `)
 })
 app.use(express.static(__dirname+"/public"))//middle ware for getting css file and others file
 app.get('/',(req,res)=>{
